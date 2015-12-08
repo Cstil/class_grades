@@ -1,3 +1,7 @@
-Python 2.7.10 |Anaconda 2.3.0 (64-bit)| (default, May 28 2015, 16:44:52) [MSC v.1500 64 bit (AMD64)] on win32
-Type "copyright", "credits" or "license()" for more information.
->>> 
+def read_data():
+    import csv
+    import numpy as np
+    columns = np.loadtxt('grades1.csv',delimiter=',',skiprows=0,unpack=True,dtype='str')
+    grades = columns[1].astype(float)
+    return grades
+print read_data()
